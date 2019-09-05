@@ -39,7 +39,7 @@ print(str)'''
 
 ''' This an application that will get a string and print it in Caear Cipher 13 '''
 
-your_words = "lbh zhfg hayrnea jung lbh unir yrnearq"
+''' your_words = "lbh zhfg hayrnea jung lbh unir yrnearq"
 list0 = list('abcdefghijklmnopqrstuvwxyz')
 list13 = list('nopqrstuvwxyzabcdefghijklm')
 str = ""
@@ -52,7 +52,32 @@ for index_one in your_words:
     else:
      test = int(list13.index(index_one))
      str += list0[test]
-print(str)
+print(str)'''
+
+
+text = input("What is your message ? ")
+uppercase_text = text.upper()
+letter_to_convert = ['A', 'E', 'G', 'I', 'O', 'S', 'T']
+number = [4,3,6,1,0,5,7]
+
+translate = ""
+index = 0
+while index < len(uppercase_text):
+      #print(uppercase_text[index])
+      index_inner_loop = 0
+      letter_to_add_to_translation = ""
+      while index_inner_loop < len(letter_to_convert):
+        #print(letter_to_convert[index_inner_loop])
+        if uppercase_text[index] == letter_to_convert[index_inner_loop]:
+            letter_to_add_to_translation = str(number[index_inner_loop])
+            break
+        else:
+            letter_to_add_to_translation = uppercase_text[index]
+        index_inner_loop += 1
+      index +=1
+      translate = translate + letter_to_add_to_translation
+print(translate)
+
    
         
 
